@@ -1,0 +1,33 @@
+{% extends "fourth_task/menu.html" %}
+
+
+{% block title %}Home - {{ block.super }}{% endblock%}
+
+{% block pivetctvie %}
+    {{ block.super }}
+    <p>********************************************</p>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock%}
+
+{% block content %}
+    <p>НАШИ ПРИЕМУЩЕСТВА</p>
+    <li>Игры интересные, захватывающие!</li>
+    <li> Быстрое оформление заказа</li>
+    <li> Быстрая доставка покупателю</li>
+{% endblock %}
+
+{% block section %}
+    <p>Контакты::</p>
+    <p>т. 8-800-90000000<p/>
+    <p>Адрес: 620000, г. Новосибирск, ул. Ленина, 5 <p/>
+{% endblock %}
+
+{% block info %}
+    <ul>
+        <a href="#">Закажитe разработку сайта у нас!</a>
+    </ul>
+    {{ block.super }}
+{% endblock%}

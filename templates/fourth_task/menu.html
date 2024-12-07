@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} МАГАЗИН "GAMES" {% endblock %}</title>
+    <link rel = 'stylesheet' type="text/css" href = '{% static "style.css" %}'>
+</head>
+<body>
+    <pivetctvie>
+        {% block pivetctvie %}
+            <h1>{{text}}</h1>
+            <h2>Удобный интерфейс.</h2>
+            <h3>Интересные персонажи.</h3>
+            <p>Установка удобной вам скорости действий.</p>
+        {% endblock %}
+    </pivetctvie>
+
+    <ul>
+        <menu>
+            {% block menu %}
+                <a href="#">Магазин</a>
+            <li> Каталог</li>
+                <a href='http://127.0.0.1:8000/games/'>Cyberpunk</a>
+            <li> </li>
+                <a href='http://127.0.0.1:8000/games/'>Mario</a>
+            <li> </li>
+                <a href='http://127.0.0.1:8000/games/'>Hitman</a>
+            <li> </li>
+                <a href='http://127.0.0.1:8000/cart/'>КАРЗИНА</a>
+            {% endblock %}
+        </menu>>
+    </ul>
+
+    <content>
+        {% block content %}
+        <p>Тут будет название блока</p>>
+            <li> БЫСТРОЕ ОФОРМЛЕНИЕ</li>
+            <li> ВЫСОКОЕ КАЧЕСТВО ПРОДУКЦИ</li>
+            <li> БЫСТРАЯ ДОСТАВКА </li>
+        {% endblock %}
+    </content>>
+
+    <section>
+        {% block section %}
+        <ul>
+            {% for i in list %}
+            <li>{{ i|title }}</li>
+            {% endfor %}
+        </ul>
+        {% endblock section%}
+    </section>
+    <info>
+        {% block info %}
+        {% include 'fourth_task/info.html' %}
+        {% endblock %}
+    </info>
+</body>
+</html>

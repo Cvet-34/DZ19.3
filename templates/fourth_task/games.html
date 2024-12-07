@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    {% for games in Games %}
+        <h2>Название игры: {{ games.title }}</h2><button>КУПИТЬ</button>
+        <p>Цена игры: {{ games.cost }}</p>
+        <p>Описание игры: {{ games.description }}</p>
+    {% endfor %}
+</body>
+<mag>
+    <button>
+        <a href='http://127.0.0.1:8000/platform/'>Вернутся на Главную страницу в МАГАЗИН</a>
+    </button>
+    <button>
+        <a href='http://127.0.0.1:8000/cart/'>КАРЗИНА</a>
+    </button>
+</mag>
+
+</html>
