@@ -8,9 +8,10 @@ class Buyer(models.Model):
     age = models.IntegerField(verbose_name='Bозраст пользователя')
 
     class Meta:
-        ordering = ('name',)
+        ordering = ['name',]         # сортировка
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
+
 
     def get_absolute_url(self):
         return reverse('game_detail', args=[self.id])
@@ -26,5 +27,7 @@ class Game(models.Model):
                                           default=False)  # ограничение возраста 18 + (BooleanField, по умолчанию False)
     buyer = models.ManyToManyField(Buyer, blank=True, related_name='game')
 
+
     def __str__(self):
         return self.title
+
